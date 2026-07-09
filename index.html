@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#05070b">
+  <meta name="description" content="RNM Esports — Official Ranime Gaming Clan. Compete, create, dominate.">
+  <title>RNM ESPORTS — Official Ranime Gaming Clan</title>
+  <link rel="icon" type="image/png" href="assets/rnm-esports-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;0,900;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20260709-12">
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="page-progress" aria-hidden="true"></div>
+  <aside class="live-alert" id="live-alert" aria-live="polite" hidden>
+    <div class="live-alert-inner container">
+      <div class="live-alert-copy">
+        <i class="live-dot"></i>
+        <div><b>RANIME IS LIVE NOW</b><span>Join the stream and support RNM</span></div>
+      </div>
+      <a id="live-alert-link" href="#" target="_blank" rel="noreferrer">WATCH NOW <span>↗</span></a>
+      <button id="close-live-alert" type="button" aria-label="Close live notification">×</button>
+    </div>
+  </aside>
+
+  <header class="nav-wrap">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="RNM Esports home">
+        <span class="brand-mark logo-mark"><img src="assets/rnm-esports-logo.png" alt=""></span>
+        <span class="brand-copy"><b>RNM</b><small>ESPORTS</small></span>
+      </a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span>
+        <span class="sr-only">Toggle menu</span>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <div class="language-toggle" id="language-toggle" aria-label="Switch language">
+          <a href="?lang=en" data-lang="en">EN</a><span>/</span><a href="?lang=ar" data-lang="ar">عربي</a>
+        </div>
+        <a class="nav-cta" href="#join">Join RNM <span>↗</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <canvas id="particle-canvas" aria-hidden="true"></canvas>
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-aurora" aria-hidden="true"></div>
+      <div class="hero-slash slash-one"></div>
+      <div class="hero-slash slash-two"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span></span> Official Ranime Gaming Clan</div>
+          <h1><span class="ranime-word">RANIME</span><br><span class="gaming-word">GAMING</span></h1>
+          <p>We are more than a team. We are one family building prestige in PUBG through strength, loyalty, respect, and one vision.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#join">Join the clan <span>↗</span></a>
+            <a class="btn btn-ghost" id="watch-live" href="#" target="_blank" rel="noreferrer"><i class="live-dot"></i> <span class="watch-label">Watch live</span></a>
+          </div>
+        </div>
+        <div class="hero-emblem reveal" aria-hidden="true">
+          <div class="emblem-glow"></div>
+          <div class="emblem-ring ring-1"></div>
+          <div class="emblem-ring ring-2"></div>
+          <div class="orbit orbit-a"><i></i></div>
+          <div class="orbit orbit-b"><i></i></div>
+          <div class="emblem-core">
+            <strong class="emblem-word">RNM</strong>
+            <small>ESPORTS</small>
+          </div>
+          <div class="status-chip">ONLINE <b>24</b></div>
+          <div class="rank-chip"><small>GLOBAL RANK</small><b>#014</b></div>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="container stats-inner">
+          <div><strong data-count="60">0</strong><span>Members</span></div>
+          <div><strong>RNM</strong><span>Identity</span></div>
+          <div><strong>ONE</strong><span>Heart</span></div>
+          <div class="scroll-cue"><span>Scroll to explore</span><i></i></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ticker" aria-label="RNM Esports motto">
+      <div class="ticker-track">
+        <span>COMPETE</span><i>✦</i><span>CREATE</span><i>✦</i><span>DOMINATE</span><i>✦</i><span>RNM ESPORTS</span><i>✦</i>
+        <span>COMPETE</span><i>✦</i><span>CREATE</span><i>✦</i><span>DOMINATE</span><i>✦</i><span>RNM ESPORTS</span><i>✦</i>
+      </div>
+    </div>
+
+    <section class="section about" id="about">
+      <div class="container about-grid">
+        <div class="section-heading reveal">
+          <span class="section-index">01 / ABOUT</span>
+          <h2>ONE CLAN.<br><em>ZERO LIMITS.</em></h2>
+        </div>
+        <div class="about-copy reveal">
+          <p class="lead">RNM is more than a tag. It’s a promise to show up, level up, and bring the whole squad with you.</p>
+          <p>From ranked ladders to tournament finals, Ranime Gaming Clan brings together serious competitors, fearless creators, and the loudest community in the lobby.</p>
+          <div class="values">
+            <div><b>01</b><span>Compete with purpose</span></div>
+            <div><b>02</b><span>Respect the squad</span></div>
+            <div><b>03</b><span>Build the legacy</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section rules" id="rules">
+      <div class="container">
+        <div class="section-top reveal">
+          <div><span class="section-index">02 / CODE</span><h2>CLAN RULES</h2></div>
+          <p>Great teams run on trust. These are the standards behind the RNM tag.</p>
+        </div>
+        <div class="rule-grid">
+          <article class="rule-card reveal"><span>01</span><h3>Respect first</h3><p>No toxicity, hate, or harassment. Competitive energy stays competitive.</p></article>
+          <article class="rule-card reveal"><span>02</span><h3>Stay active</h3><p>Communicate, show up for the squad, and keep your status updated.</p></article>
+          <article class="rule-card reveal"><span>03</span><h3>Play fair</h3><p>Zero tolerance for cheats, exploits, or anything that damages our name.</p></article>
+          <article class="rule-card reveal"><span>04</span><h3>Rep the tag</h3><p>Wear RNM with pride and represent the clan professionally everywhere.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section roster" id="roster">
+      <div class="container">
+        <div class="section-top reveal">
+          <div><span class="section-index">03 / LEADERS</span><h2>MEET THE LEADERS</h2></div>
+          <p>Different roles. One objective. The core team leading RNM into every battle.</p>
+        </div>
+        <div class="team-grid">
+          <a class="player-card player-link reveal" href="https://www.tiktok.com/@ranimegaming" target="_blank" rel="noreferrer" aria-label="Open RanimeGaming on TikTok">
+            <div class="player-visual red leader-visual">
+              <img class="player-photo" src="assets/ranimegaming-leader.jpg" alt="RanimeGaming, RNM Esports leader">
+              <span class="role">LEADER</span>
+            </div>
+            <div class="player-info"><div><h3>RANIMEGAMING</h3><p>Leader / Founder</p></div><span>LB</span></div>
+          </a>
+          <a class="player-card player-link reveal" href="https://www.tiktok.com/@darwish.hajj" target="_blank" rel="noreferrer" aria-label="Open RNM الليل on TikTok">
+            <div class="player-visual blue member-photo-visual">
+              <img class="player-photo" src="assets/rnm-al-layl.png" alt="RNM الليل, RNM Esports captain">
+              <span class="role">LEADER</span>
+            </div>
+            <div class="player-info"><div><h3>RNM الليل</h3><p>Leader / Founder</p></div><span>LB</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gallery" id="gallery">
+      <div class="container">
+        <div class="section-top reveal">
+          <div><span class="section-index">05 / MEDIA</span><h2>INSIDE RNM</h2></div>
+          <p>Clips, victories, and moments from the clan. The grind looks good from here.</p>
+        </div>
+        <div class="gallery-grid">
+          <a class="gallery-item gallery-main scrim-feature reveal" href="https://www.tiktok.com/@ranimegaming/video/7637928309866745095" target="_blank" rel="noreferrer" aria-label="Watch RNM versus CAST عقرب scrim on TikTok">
+            <div class="scene scene-1"><span class="crosshair"></span><div class="versus-mark"><b>RNM</b><i>VS</i><b>CAST 3QRAB</b></div></div>
+            <div class="gallery-label"><span>SCRIM مع CAST عقرب</span><b>01</b></div>
+          </a>
+          <a class="gallery-item tiktok-card reveal" href="https://vt.tiktok.com/ZSYVrwwBP/" target="_blank" rel="noreferrer" aria-label="Watch 1 vs 3 on RanimeGaming TikTok">
+            <div class="scene tiktok-scene scene-2">
+              <span class="tiktok-badge">TIKTOK</span>
+              <span class="video-play">▶</span>
+              <strong>1 VS 3</strong>
+              <small>@RANIMEGAMING</small>
+            </div>
+            <div class="gallery-label"><span>WATCH ON TIKTOK</span><b>02 ↗</b></div>
+          </a>
+          <a class="gallery-item tiktok-card reveal" href="https://vt.tiktok.com/ZSYVrsYfb/" target="_blank" rel="noreferrer" aria-label="Watch Make Your Day on RanimeGaming TikTok">
+            <div class="scene tiktok-scene scene-3">
+              <span class="tiktok-badge">TIKTOK</span>
+              <span class="video-play">▶</span>
+              <strong>MAKE YOUR DAY</strong>
+              <small>@RANIMEGAMING</small>
+            </div>
+            <div class="gallery-label"><span>WATCH ON TIKTOK</span><b>03 ↗</b></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section join" id="join">
+      <div class="join-glow"></div>
+      <div class="container join-grid">
+        <div class="join-copy reveal">
+          <span class="section-index">06 / RECRUITMENT</span>
+          <h2>JOIN<br><em>REQUIREMENTS</em></h2>
+          <p>Think you have what it takes? Tell us how you play. We review every application and contact the strongest fits.</p>
+        </div>
+        <form class="join-form reveal" id="join-form">
+          <div class="form-row">
+            <label>Full name<input name="fullName" type="text" placeholder="YOUR NAME" autocomplete="name" required></label>
+            <label>PUBG ID<input name="pubgId" type="text" inputmode="numeric" placeholder="YOUR PLAYER ID" required></label>
+          </div>
+          <div class="form-row">
+            <label>Device
+              <select name="device" required>
+                <option value="">SELECT DEVICE</option>
+                <option>Phone</option>
+                <option>Tablet / iPad</option>
+              </select>
+            </label>
+            <label>Discord / WhatsApp<input name="contact" type="text" placeholder="HOW CAN WE CONTACT YOU?" required></label>
+          </div>
+          <div class="upload-grid">
+            <label class="upload-box">
+              <input name="gameplayVideo" type="file" accept="video/mp4,video/webm,video/quicktime" required>
+              <span class="upload-icon">▶</span>
+              <b>UPLOAD GAMEPLAY VIDEO</b>
+              <small>MP4, MOV or WEBM</small>
+              <em class="file-name">Choose video</em>
+            </label>
+            <label class="upload-box">
+              <input name="pubgIdImage" type="file" accept="image/jpeg,image/png,image/webp" required>
+              <span class="upload-icon">▣</span>
+              <b>UPLOAD PUBG ID PHOTO</b>
+              <small>JPG, PNG or WEBP</small>
+              <em class="file-name">Choose photo</em>
+            </label>
+          </div>
+          <label>Player note <textarea name="experience" rows="3" placeholder="TELL US ABOUT YOUR PUBG EXPERIENCE..."></textarea></label>
+          <button class="btn btn-primary submit-btn" type="submit">Send application <span>↗</span></button>
+          <p class="form-status" role="status"></p>
+        </form>
+        <aside class="acceptance-requirements reveal">
+          <ul>
+            <li>Respect the administration and all members.</li>
+            <li>Have good performance in PUBG Mobile.</li>
+            <li>Upload a clear video that proves your skill level.</li>
+            <li>Commit to teamwork and do not disrupt the clan.</li>
+            <li>Stay active in clan training sessions and scrims.</li>
+          </ul>
+          <div class="join-note"><span>!</span><p>Girls must be 18+ · Boys must be 20+</p></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="social-strip" aria-label="Social links">
+      <a href="https://www.tiktok.com/@ranimegaming" target="_blank" rel="noreferrer"><span>TIKTOK</span><b>↗</b></a>
+      <a href="https://discord.gg/p7MRAWybR" target="_blank" rel="noreferrer"><span>DISCORD</span><b>↗</b></a>
+      <a href="https://t.me/ranimegaming" target="_blank" rel="noreferrer"><span>TELEGRAM</span><b>↗</b></a>
+      <a href="https://kick.com/ranimegaming" target="_blank" rel="noreferrer"><span>KICK</span><b>↗</b></a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <a class="brand footer-brand" href="#home"><span class="brand-mark logo-mark"><img src="assets/rnm-esports-logo.png" alt=""></span><span class="brand-copy"><b>RNM</b><small>ESPORTS</small></span></a>
+      <p>© 2026 RNM ESPORTS. ALL RIGHTS RESERVED.</p>
+      <a href="#home" class="back-top">BACK TO TOP ↑</a>
+    </div>
+  </footer>
+  <script src="config.js?v=20260709-13"></script>
+  <script src="script.js?v=20260709-13"></script>
+</body>
+</html>
