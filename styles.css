@@ -118,3 +118,45 @@
 .admin-card-actions button[data-action="delete"]{border-color:rgba(255,39,75,.5);background:rgba(255,39,75,.08)}
 @media(max-width:900px){.video-grid{grid-template-columns:1fr 1fr}.admin-hero{grid-template-columns:1fr;gap:25px;padding-top:18px}.admin-video-card{grid-template-columns:1fr}.admin-userbar,.dashboard-top{align-items:flex-start;flex-direction:column}}
 @media(max-width:600px){.video-grid{grid-template-columns:1fr}.admin-shell{width:min(100% - 24px,1180px);padding-top:22px}.admin-hero h1{font-size:56px;letter-spacing:-1px}.auth-card,.dashboard-card{padding:22px 16px}.admin-actions .btn{width:auto;min-width:130px}.admin-video-card{padding:13px}.submission-info h3{font-size:24px}}
+
+/* Rampage-inspired RNM premium template layer */
+body:before{content:"";position:fixed;inset:0;z-index:-3;background:radial-gradient(circle at 50% 0,rgba(255,0,32,.22),transparent 36%),linear-gradient(180deg,#080204 0%,#0b0507 42%,#05070b 100%);pointer-events:none}
+body:after{content:"";position:fixed;inset:0;z-index:-2;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:82px 82px;mask-image:linear-gradient(to bottom,#000,transparent 90%);pointer-events:none}
+.rampage-rail{position:fixed;z-index:45;left:24px;top:50%;transform:translateY(-50%);display:grid;gap:18px}
+.rampage-rail a{display:grid;grid-template-columns:28px 1fr;gap:12px;align-items:center;color:#fff;text-decoration:none;text-transform:uppercase;font:800 10px var(--font-body);letter-spacing:1.6px;opacity:.45;transition:.25s}
+.rampage-rail a:hover{opacity:1;transform:translateX(5px)}
+.rampage-rail b{color:var(--red);font:900 14px var(--font-display)}
+.rampage-rail span{writing-mode:vertical-rl;transform:rotate(180deg)}
+.nav-wrap{background:linear-gradient(180deg,rgba(8,2,5,.72),transparent)}
+.nav-wrap.scrolled{background:rgba(8,3,6,.9)}
+.brand-copy b{font-size:28px}.brand-copy small{color:#fff;opacity:.7}
+.hero{min-height:104vh;background:radial-gradient(circle at 67% 40%,rgba(255,0,32,.42),transparent 24%),radial-gradient(circle at 58% 55%,rgba(0,184,255,.1),transparent 24%),linear-gradient(180deg,#130205 0%,#080205 58%,#05070b 100%)}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.38),transparent 45%,rgba(0,0,0,.25)),url("assets/rnm-esports-logo.png");background-size:auto, min(720px,65vw);background-position:center, right -90px center;background-repeat:no-repeat;opacity:.18;filter:saturate(1.2) contrast(1.1);pointer-events:none}
+.hero-inner{grid-template-columns:1fr .62fr;padding-top:170px}
+.hero-copy{position:relative;z-index:3;max-width:900px}
+.hero-copy:before{content:"RNM // PUBG MOBILE";display:inline-flex;margin-bottom:18px;padding:10px 14px;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.035);font:900 11px var(--font-body);letter-spacing:2.6px;color:#fff}
+.hero h1{font-size:clamp(88px,13vw,205px);line-height:.72;letter-spacing:-7px;margin:10px 0 28px}
+.hero h1 .ranime-word{font-size:1.05em;filter:drop-shadow(0 0 42px rgba(255,0,32,.35))}
+.hero h1 .gaming-word{font-size:.62em;transform:translateX(118px);letter-spacing:9px;color:#fff;text-shadow:0 0 35px rgba(255,255,255,.18)}
+.hero-copy>p{max-width:760px;font-size:clamp(17px,2.1vw,31px);line-height:1.45;color:#f0f1f4;text-shadow:0 8px 30px rgba(0,0,0,.5)}
+.hero-actions{margin-top:38px}.btn{min-height:58px;border-radius:999px;clip-path:none}.btn-primary{background:#ff0b18;box-shadow:0 0 35px rgba(255,11,24,.38),inset 0 0 0 1px rgba(255,255,255,.16)}.btn-ghost{background:rgba(255,255,255,.08);backdrop-filter:blur(10px)}
+.hero-emblem{width:min(380px,30vw);opacity:.9}.emblem-core{background:linear-gradient(145deg,rgba(120,0,10,.92),rgba(8,8,12,.94));box-shadow:0 0 90px rgba(255,0,32,.28)}
+.ticker{background:#ff0918;color:#fff;transform:none}.ticker span{color:#fff;-webkit-text-stroke:0}.ticker i{color:#05070b;text-shadow:none}
+.section{padding:145px 0}.section:before{content:"";position:absolute;left:0;top:0;width:100%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.16),transparent)}
+.section h2{font-size:clamp(70px,8vw,128px);line-height:.82;letter-spacing:-4px}.section h2 em{-webkit-text-stroke:1.3px #ff1022}
+.section-index{color:#fff;opacity:.7}.section-top{border-top:1px solid rgba(255,255,255,.09);padding-top:24px}
+.about,.roster,.join{background:linear-gradient(180deg,#05070b,#0b0204)}
+.rules,.gallery,.approved-videos{background:linear-gradient(180deg,#140306,#07080d)}
+.about-copy .lead{font-size:clamp(24px,2.8vw,38px);line-height:1.22;color:#fff;font-weight:800}
+.values div,.match,.acceptance-requirements li{border-color:rgba(255,255,255,.13)}
+.rule-grid{gap:22px;background:transparent;border:0;grid-template-columns:repeat(3,1fr)}
+.rule-card{min-height:315px;border:1px solid rgba(255,0,32,.25);border-radius:28px;background:linear-gradient(145deg,rgba(255,0,25,.12),rgba(15,5,8,.78));box-shadow:0 26px 80px rgba(0,0,0,.3)}
+.rule-card:nth-child(4){grid-column:2}.rule-card h3{font-size:34px;margin-top:95px}.rule-card p{font-size:14px;color:#c7cbd3}
+.team-grid{max-width:none;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}.player-card{border-color:rgba(255,255,255,.13);border-radius:28px;overflow:hidden;background:#100407}.player-visual{height:560px}.player-info{padding:26px 30px}.player-info h3{font-size:36px}.player-info p{font-size:12px}
+.gallery-grid{grid-template-columns:1.2fr 1fr 1fr;grid-template-rows:520px;gap:24px}.gallery-main{grid-row:auto;min-height:520px}.gallery-item{border-radius:30px;min-height:520px;border:1px solid rgba(255,255,255,.1)}.gallery-label{padding:30px;font-size:13px}.tiktok-scene strong{font-size:42px}
+.join-grid{border:1px solid rgba(255,255,255,.1);border-radius:32px;padding:38px;background:linear-gradient(135deg,rgba(255,0,24,.12),rgba(255,255,255,.025));box-shadow:0 30px 90px rgba(0,0,0,.35)}
+.join-form{border-radius:28px;border-color:rgba(255,255,255,.13);background:rgba(5,7,11,.72);backdrop-filter:blur(16px)}
+.join-form input,.join-form select,.join-form textarea{border-radius:14px;background:rgba(0,0,0,.24)}.join-form .upload-box{border-radius:24px}.submit-btn{border-radius:18px}
+.social-strip{background:#ff0918;border:0}.social-strip a{border-color:rgba(0,0,0,.22);height:132px;color:#fff}.social-strip a:hover{background:#05070b}
+@media(max-width:1100px){.rampage-rail{display:none}.hero h1 .gaming-word{transform:translateX(60px)}.rule-grid{grid-template-columns:1fr 1fr}.rule-card:nth-child(4){grid-column:auto}.gallery-grid{grid-template-columns:1fr}.gallery-item,.gallery-main{min-height:360px}}
+@media(max-width:700px){.hero{min-height:100svh}.hero:after{background-size:auto,480px;background-position:center,right -190px center}.hero-inner{padding-top:112px}.hero h1{font-size:clamp(64px,19vw,92px);letter-spacing:-2px}.hero h1 .gaming-word{font-size:.74em;letter-spacing:3px;transform:translateX(26px)}.hero-copy:before{font-size:9px;letter-spacing:1.4px}.hero-copy>p{font-size:17px}.hero-emblem{display:none}.section{padding:95px 0}.section h2{font-size:clamp(54px,16vw,70px);letter-spacing:-2px}.rule-grid,.team-grid{grid-template-columns:1fr}.rule-card{border-radius:22px;min-height:230px}.rule-card h3{margin-top:48px}.player-visual{height:360px}.gallery-grid{display:grid}.gallery-item,.gallery-main{min-height:315px}.join-grid{padding:18px;border-radius:22px}.social-strip{grid-template-columns:1fr 1fr}.social-strip a{height:90px}}
