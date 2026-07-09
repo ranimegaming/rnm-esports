@@ -22,5 +22,18 @@ window.RNM_CONFIG = {
       name: "DARWISH.HAJJ",
       url: "https://www.tiktok.com/@darwish.hajj/live"
     }
+  },
+
+  /*
+    SUPABASE SETTINGS
+    Create a Supabase project, run supabase-schema.sql, then paste:
+    - Project URL
+    - anon public key
+  */
+  supabase: {
+    url: "",
+    anonKey: "",
+    videoBucket: "rnm-videos",
+    table: "video_submissions"
   }
 };

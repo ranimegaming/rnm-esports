@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#05070b">
+  <title>Admin Dashboard — RNM ESPORTS</title>
+  <link rel="icon" type="image/png" href="assets/rnm-esports-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;0,900;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20260709-14">
+</head>
+<body class="admin-body">
+  <div class="noise"></div>
+  <main class="admin-shell">
+    <section class="admin-hero">
+      <a class="brand" href="index.html">
+        <span class="brand-mark logo-mark"><img src="assets/rnm-esports-logo.png" alt=""></span>
+        <span class="brand-copy"><b>RNM</b><small>ESPORTS</small></span>
+      </a>
+      <div>
+        <span class="section-index">ADMIN ONLY</span>
+        <h1>RNM CONTROL<br><em>DASHBOARD</em></h1>
+        <p>Review pending gameplay videos, approve strong players, reject weak submissions, or delete files.</p>
+      </div>
+    </section>
+
+    <section class="admin-panel">
+      <div class="auth-card" id="admin-login-card">
+        <h2>Admin login</h2>
+        <p class="muted">Only accounts with role <b>admin</b> in Supabase can open this dashboard.</p>
+        <form id="admin-login-form" class="admin-form">
+          <label>Email<input name="email" type="email" placeholder="admin@email.com" required></label>
+          <label>Password<input name="password" type="password" placeholder="password" required></label>
+          <button class="btn btn-primary submit-btn" type="submit">Login <span>↗</span></button>
+          <p class="form-status" id="admin-login-status"></p>
+        </form>
+      </div>
+
+      <div class="dashboard-card" id="admin-dashboard" hidden>
+        <div class="dashboard-top">
+          <div>
+            <span class="section-index">PENDING VIDEOS</span>
+            <h2>Review queue</h2>
+          </div>
+          <div class="admin-actions">
+            <button class="btn btn-ghost" id="refresh-videos" type="button">Refresh</button>
+            <button class="small-danger" id="admin-logout" type="button">Logout</button>
+          </div>
+        </div>
+        <div class="admin-video-list" id="admin-video-list">
+          <article class="video-empty">Loading pending videos...</article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="config.js?v=20260709-14"></script>
+  <script src="supabase-app.js?v=20260709-14"></script>
+  <script src="admin.js?v=20260709-14"></script>
+</body>
+</html>

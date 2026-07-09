@@ -1,6 +1,6 @@
 # RNM ESPORTS
 
-Premium static esports clan website built with HTML, CSS, and JavaScript.
+Premium esports clan website built with HTML, CSS, JavaScript, and Supabase.
 
 ## Run locally
 
@@ -10,7 +10,11 @@ Open `index.html` directly, or run any static file server in this folder.
 
 This folder can be deployed as-is to Vercel or Cloudflare Pages. No build command is required; use the project root as the output directory.
 
-Before publishing, replace the placeholder social URLs and connect the join form to your preferred form service (Formspree, Web3Forms, or a serverless function).
+Vercel routes:
+
+- `/` public website
+- `/upload` user video upload page
+- `/admin` admin dashboard
 
 ## Live notification
 
@@ -18,6 +22,36 @@ Open `config.js` and set `liveStreamer` to `"ranimegaming"` or `"darwish.hajj"` 
 
 For fully automatic Kick/TikTok/YouTube detection, connect `config.js` to the platform API through a serverless function.
 
-## Join uploads
+## Supabase setup
 
-The form accepts a gameplay video and PUBG ID screenshot in the browser. Connect the form to Cloudinary, Supabase Storage, or another upload backend before publishing so uploaded files are delivered and stored.
+1. Create a Supabase project.
+2. Open Supabase SQL Editor and run `supabase-schema.sql`.
+3. In Supabase, copy your Project URL and anon public key.
+4. Paste them into `config.js`:
+
+```js
+supabase: {
+  url: "YOUR_SUPABASE_PROJECT_URL",
+  anonKey: "YOUR_SUPABASE_ANON_KEY",
+  videoBucket: "rnm-videos",
+  table: "video_submissions"
+}
+```
+
+5. Create your admin account from `/upload` or Supabase Auth.
+6. Run this in Supabase SQL Editor, replacing the email:
+
+```sql
+update public.profiles
+set role = 'admin'
+where email = 'YOUR_ADMIN_EMAIL@example.com';
+```
+
+## Upload and admin flow
+
+- Users login/signup and upload at `/upload`.
+- Uploaded videos are stored in Supabase Storage.
+- Every upload starts as `pending`.
+- Admins login at `/admin`.
+- Admins can preview, approve, reject, or delete videos.
+- Approved videos appear automatically on the public website.

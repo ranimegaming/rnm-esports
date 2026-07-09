@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#05070b">
+  <title>Upload Video — RNM ESPORTS</title>
+  <link rel="icon" type="image/png" href="assets/rnm-esports-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;0,900;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20260709-14">
+</head>
+<body class="admin-body">
+  <div class="noise"></div>
+  <main class="admin-shell">
+    <section class="admin-hero">
+      <a class="brand" href="index.html">
+        <span class="brand-mark logo-mark"><img src="assets/rnm-esports-logo.png" alt=""></span>
+        <span class="brand-copy"><b>RNM</b><small>ESPORTS</small></span>
+      </a>
+      <div>
+        <span class="section-index">USER UPLOAD</span>
+        <h1>SUBMIT YOUR<br><em>GAMEPLAY</em></h1>
+        <p>Login or create an account, upload your PUBG gameplay, and wait for RNM admin approval.</p>
+      </div>
+    </section>
+
+    <section class="admin-panel">
+      <div class="auth-card" id="user-auth-card">
+        <h2>Login / Sign up</h2>
+        <p class="muted">Use email and password. Your video will be pending until an admin approves it.</p>
+        <form id="user-auth-form" class="admin-form">
+          <label>Email<input name="email" type="email" placeholder="you@email.com" required></label>
+          <label>Password<input name="password" type="password" placeholder="password" minlength="6" required></label>
+          <div class="admin-actions">
+            <button class="btn btn-primary" type="submit" data-mode="login">Login</button>
+            <button class="btn btn-ghost" type="button" id="signup-btn">Sign up</button>
+          </div>
+          <p class="form-status" id="user-auth-status"></p>
+        </form>
+      </div>
+
+      <form class="join-form upload-page-form" id="upload-form" hidden>
+        <div class="admin-userbar">
+          <b id="upload-user-email">Logged in</b>
+          <button type="button" class="small-danger" id="upload-logout">Logout</button>
+        </div>
+        <div class="form-row">
+          <label>Full name<input name="fullName" type="text" placeholder="YOUR NAME" autocomplete="name" required></label>
+          <label>PUBG ID<input name="pubgId" type="text" inputmode="numeric" placeholder="YOUR PLAYER ID" required></label>
+        </div>
+        <div class="form-row">
+          <label>Device
+            <select name="device" required>
+              <option value="">SELECT DEVICE</option>
+              <option>Phone</option>
+              <option>Tablet / iPad</option>
+            </select>
+          </label>
+          <label>Discord / WhatsApp<input name="contact" type="text" placeholder="HOW CAN WE CONTACT YOU?" required></label>
+        </div>
+        <label>Player note <textarea name="experience" rows="3" placeholder="TELL US ABOUT YOUR PUBG EXPERIENCE..."></textarea></label>
+        <div class="upload-grid">
+          <label class="upload-box">
+            <input name="gameplayVideo" type="file" accept="video/mp4,video/webm,video/quicktime" required>
+            <span class="upload-icon">▶</span>
+            <b>UPLOAD GAMEPLAY VIDEO</b>
+            <small>MP4, MOV or WEBM</small>
+            <em class="file-name">Choose video</em>
+          </label>
+          <label class="upload-box">
+            <input name="pubgIdImage" type="file" accept="image/jpeg,image/png,image/webp">
+            <span class="upload-icon">▣</span>
+            <b>UPLOAD PUBG ID PHOTO</b>
+            <small>JPG, PNG or WEBP</small>
+            <em class="file-name">Choose photo</em>
+          </label>
+        </div>
+        <button class="btn btn-primary submit-btn" type="submit">Submit for review <span>↗</span></button>
+        <p class="form-status" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <script src="config.js?v=20260709-14"></script>
+  <script src="supabase-app.js?v=20260709-14"></script>
+  <script src="upload.js?v=20260709-14"></script>
+</body>
+</html>

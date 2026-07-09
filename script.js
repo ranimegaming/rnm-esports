@@ -265,6 +265,46 @@ resizeCanvas();
 drawParticles();
 window.addEventListener('resize', resizeCanvas);
 
+if (window.RNMVideoApp) {
+  window.RNMVideoApp.insertApprovedSection();
+  window.RNMVideoApp.renderApprovedVideos();
+
+  const joinForm = document.getElementById('join-form');
+  joinForm.addEventListener('submit', async event => {
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    const form = event.currentTarget;
+    const button = form.querySelector('button');
+    const status = form.querySelector('.form-status');
+    button.disabled = true;
+    button.textContent = 'TRANSMITTING...';
+    status.textContent = '';
+    try {
+      if (window.RNMVideoApp.missingConfig) {
+        throw new Error('SUPABASE IS NOT CONNECTED YET. ADD URL AND ANON KEY IN CONFIG.JS.');
+      }
+      await window.RNMVideoApp.uploadApplication(form);
+      status.textContent = 'APPLICATION SENT — VIDEO IS PENDING ADMIN APPROVAL.';
+      button.innerHTML = 'Application sent <span>✓</span>';
+      form.reset();
+      form.querySelectorAll('.upload-box').forEach(box => box.classList.remove('has-file'));
+      form.querySelectorAll('.file-name').forEach((name, index) => {
+        name.textContent = index === 0 ? 'Choose video' : 'Choose photo';
+      });
+    } catch (error) {
+      status.textContent = error.message;
+      button.innerHTML = 'Send application <span>↗</span>';
+    } finally {
+      setTimeout(() => {
+        button.disabled = false;
+        if (!button.textContent.toLowerCase().includes('send')) {
+          button.innerHTML = 'Send application <span>↗</span>';
+        }
+      }, 2500);
+    }
+  }, true);
+}
+
 document.getElementById('join-form').addEventListener('submit', e => {
   e.preventDefault();
   const form = e.currentTarget;
