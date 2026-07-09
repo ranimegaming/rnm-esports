@@ -68,7 +68,7 @@ const arabicTranslations = {
   'UPLOAD PUBG ID PHOTO': 'ارفع صورة معرّف PUBG',
   'Choose video': 'اختر فيديو',
   'Choose photo': 'اختر صورة',
-  'Player note': 'ملاحظة اللاعب',
+  'How did you hear about us?': 'كيف عرفت عنا؟',
   'Send application': 'إرسال الطلب',
   'TIKTOK': 'تيك توك',
   'YOUTUBE': 'يوتيوب',
@@ -83,7 +83,7 @@ const arabicPlaceholders = {
   'YOUR NAME': 'اكتب اسمك',
   'YOUR PLAYER ID': 'اكتب معرّف اللاعب',
   'HOW CAN WE CONTACT YOU?': 'كيف يمكننا التواصل معك؟',
-  'TELL US ABOUT YOUR PUBG EXPERIENCE...': 'أخبرنا عن خبرتك في PUBG...'
+  'TIKTOK, DISCORD, FRIEND, LIVE STREAM...': 'تيك توك، ديسكورد، صديق، بث مباشر...'
 };
 const originalText = new Map();
 const translatableNodes = [];
